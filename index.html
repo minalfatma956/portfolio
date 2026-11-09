@@ -1,0 +1,1184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Menal Fatima — Social Media Manager & AI Content Creator</title>
+<meta name="description" content="Portfolio of Menal Fatima, Social Media Manager specialising in digital marketing and AI-powered content creation." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+<style>
+/* =========================================================
+   ROOT / RESET  —  BRIGHT WHITE + STYLISH COLORFUL TEXT
+   ========================================================= */
+:root{
+  --bg:           #FFFFFF;        /* bright white */
+  --bg-soft:      #F7F8FC;        /* very light cool tint */
+  --bg-tint:      #FAF5FF;        /* very light purple wash */
+  --surface:      #FFFFFF;
+  --ink:          #0F0F1E;        /* stylish near-black navy */
+  --ink-soft:     #64748B;        /* slate gray */
+  --line:         #ECEEF5;        /* light hairline */
+  --brand:        #7C3AED;        /* vibrant purple */
+  --brand-deep:   #5B21B6;
+  --accent:       #EC4899;        /* hot pink */
+  --teal:         #06B6D4;        /* cyan */
+  --amber:        #F59E0B;        /* amber */
+  --emerald:      #10B981;        /* emerald */
+  --rose:         #FB7185;        /* rose */
+  --indigo:       #6366F1;        /* indigo */
+  --shadow-sm:    0 4px 14px rgba(15, 15, 30, .05);
+  --shadow-md:    0 18px 40px rgba(15, 15, 30, .08);
+  --shadow-lg:    0 30px 70px rgba(15, 15, 30, .12);
+  --radius:       20px;
+  --radius-lg:    30px;
+  --maxw:         1180px;
+}
+
+*{ margin:0; padding:0; box-sizing:border-box; }
+html{ scroll-behavior:smooth; -webkit-text-size-adjust:100%; }
+body{
+  font-family:'Inter', system-ui, -apple-system, sans-serif;
+  background:var(--bg);
+  color:var(--ink);
+  line-height:1.7;
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+img{ max-width:100%; display:block; }
+a{ color:inherit; text-decoration:none; }
+ul{ list-style:none; }
+
+h1,h2,h3,h4,.serif{ font-family:'Fraunces', Georgia, serif; font-weight:600; letter-spacing:-.01em; }
+
+/* gradient text utility */
+.grad-text{
+  background:linear-gradient(120deg, var(--brand) 0%, var(--accent) 50%, var(--teal) 100%);
+  -webkit-background-clip:text; background-clip:text; color:transparent;
+}
+
+/* =========================================================
+   LAYOUT HELPERS
+   ========================================================= */
+.container{ width:100%; max-width:var(--maxw); margin:0 auto; padding:0 24px; }
+section{ padding:96px 0; position:relative; }
+.eyebrow{
+  display:inline-flex; align-items:center; gap:8px;
+  font-size:.78rem; font-weight:600; letter-spacing:.14em; text-transform:uppercase;
+  color:var(--brand); background:var(--bg-tint);
+  border:1px solid var(--line); padding:7px 14px; border-radius:100px;
+  margin-bottom:18px;
+}
+.eyebrow::before{
+  content:""; width:6px; height:6px; border-radius:50%;
+  background:var(--accent);
+}
+.section-head{ max-width:680px; margin-bottom:56px; }
+.section-head h2{ font-size:clamp(2rem, 4vw, 2.85rem); line-height:1.12; margin-bottom:14px; }
+.section-head p{ color:var(--ink-soft); font-size:1.05rem; }
+
+/* =========================================================
+   NAVBAR
+   ========================================================= */
+.nav{
+  position:fixed; top:0; left:0; right:0; z-index:100;
+  padding:18px 0; transition:all .35s ease;
+}
+.nav.scrolled{
+  background:rgba(255,255,255,.85);
+  backdrop-filter:blur(14px);
+  -webkit-backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--line);
+  padding:13px 0;
+  box-shadow:var(--shadow-sm);
+}
+.nav-inner{ display:flex; align-items:center; justify-content:space-between; }
+.brand-logo{
+  font-family:'Fraunces', serif; font-weight:600; font-size:1.3rem;
+  color:var(--ink); letter-spacing:-.02em;
+}
+.brand-logo .first{ color:var(--brand); }
+.brand-logo .last{ color:var(--ink); }
+.nav-links{ display:flex; gap:34px; align-items:center; }
+.nav-links a{
+  font-size:.92rem; font-weight:500; color:var(--ink-soft);
+  position:relative; transition:color .25s;
+}
+.nav-links a::after{
+  content:""; position:absolute; left:0; bottom:-6px; width:0; height:2px;
+  background:linear-gradient(90deg, var(--brand), var(--accent));
+  border-radius:2px; transition:width .3s ease;
+}
+.nav-links a:hover{ color:var(--ink); }
+.nav-links a:hover::after{ width:100%; }
+.nav-cta{
+  background:linear-gradient(120deg, var(--brand), var(--accent));
+  color:#fff !important; padding:10px 22px; border-radius:100px;
+  font-size:.88rem; font-weight:500; transition:all .3s;
+}
+.nav-cta:hover{ transform:translateY(-2px); box-shadow:0 10px 24px rgba(124,58,237,.35); }
+.nav-cta::after{ display:none; }
+
+.menu-btn{ display:none; background:none; border:1px solid var(--line); border-radius:12px;
+  width:42px; height:42px; cursor:pointer; font-size:1.1rem; color:var(--ink); }
+
+/* =========================================================
+   HERO / BANNER
+   ========================================================= */
+.hero{
+  min-height:100vh; padding:130px 0 80px;
+  display:flex; align-items:center;
+  position:relative; overflow:hidden;
+}
+.hero::before{
+  content:""; position:absolute; top:-12%; right:-8%; width:55vw; height:55vw;
+  background:radial-gradient(circle at center, rgba(124,58,237,.10), transparent 65%);
+  border-radius:50%; z-index:0;
+}
+.hero::after{
+  content:""; position:absolute; bottom:-20%; left:-10%; width:45vw; height:45vw;
+  background:radial-gradient(circle at center, rgba(236,72,153,.10), transparent 65%);
+  border-radius:50%; z-index:0;
+}
+.hero-grid{
+  display:grid; grid-template-columns:1.15fr .85fr; gap:60px; align-items:center;
+  position:relative; z-index:1;
+}
+.hero-text .greeting{
+  display:inline-flex; align-items:center; gap:10px;
+  background:var(--surface); border:1px solid var(--line);
+  padding:8px 16px; border-radius:100px; font-size:.85rem; color:var(--ink-soft);
+  margin-bottom:24px; box-shadow:var(--shadow-sm);
+}
+.hero-text .greeting .wave{ font-size:1rem; }
+.hero-text h1{
+  font-size:clamp(2.6rem, 6vw, 4.6rem); line-height:1.05;
+  margin-bottom:20px; color:var(--ink);
+}
+.hero-text h1 .accent-word{
+  font-style:italic; font-weight:500;
+  background:linear-gradient(120deg, var(--brand), var(--accent), var(--teal));
+  -webkit-background-clip:text; background-clip:text; color:transparent;
+}
+.hero-text .role{
+  font-size:1.15rem; color:var(--ink-soft); font-weight:500;
+  margin-bottom:22px; letter-spacing:.01em;
+}
+.hero-text .role span{ color:var(--brand); font-weight:600; }
+.hero-text .tagline{
+  font-size:1.02rem; color:var(--ink-soft); max-width:520px; margin-bottom:34px;
+}
+.hero-meta{ display:flex; flex-wrap:wrap; gap:14px 26px; margin-bottom:36px; }
+.hero-meta a{ display:inline-flex; align-items:center; gap:9px; font-size:.92rem; color:var(--ink-soft); transition:color .25s; }
+.hero-meta a:hover{ color:var(--brand); }
+.hero-meta i{ color:var(--accent); }
+.hero-btns{ display:flex; gap:14px; flex-wrap:wrap; }
+.btn{
+  display:inline-flex; align-items:center; gap:10px;
+  padding:14px 26px; border-radius:100px; font-weight:500; font-size:.95rem;
+  transition:all .3s ease; cursor:pointer; border:none;
+}
+.btn-primary{ background:linear-gradient(120deg, var(--brand), var(--accent)); color:#fff; }
+.btn-primary:hover{ transform:translateY(-2px); box-shadow:0 14px 30px rgba(124,58,237,.35); }
+.btn-ghost{ background:var(--surface); color:var(--ink); border:1px solid var(--line); }
+.btn-ghost:hover{ border-color:var(--brand); color:var(--brand); transform:translateY(-2px); }
+
+/* hero image */
+.hero-figure{ position:relative; display:flex; justify-content:center; align-items:center; }
+.hero-figure .ring{
+  position:absolute; inset:-6%; border-radius:50%;
+  border:1.5px dashed rgba(124,58,237,.30);
+  animation:spin 30s linear infinite;
+}
+.hero-figure .ring.r2{ inset:4%; border-style:dotted; border-color:rgba(236,72,153,.30); animation-duration:40s; animation-direction:reverse; }
+@keyframes spin{ to{ transform:rotate(360deg); } }
+
+.hero-photo-wrap{
+  width:min(360px, 80vw); aspect-ratio:1/1; border-radius:50%;
+  background:linear-gradient(135deg, rgba(124,58,237,.15), rgba(236,72,153,.15));
+  padding:10px; position:relative; box-shadow:var(--shadow-lg);
+}
+.hero-photo{
+  width:100%; height:100%; border-radius:50%; object-fit:cover;
+  background:var(--bg-soft);
+  border:6px solid var(--surface);
+}
+.hero-badge{
+  position:absolute; background:var(--surface); border:1px solid var(--line);
+  padding:10px 16px; border-radius:14px; box-shadow:var(--shadow-md);
+  display:flex; align-items:center; gap:10px; font-size:.85rem; font-weight:500;
+  color:var(--ink);
+  animation:float 5s ease-in-out infinite;
+}
+.hero-badge i{ color:var(--accent); font-size:1rem; }
+.hero-badge.b1{ top:8%; left:-8%; }
+.hero-badge.b2{ bottom:10%; right:-6%; animation-delay:1.5s; }
+.hero-badge.b2 i{ color:var(--teal); }
+.hero-badge.b3{ bottom:36%; left:-12%; animation-delay:3s; }
+.hero-badge.b3 i{ color:var(--emerald); }
+@keyframes float{ 0%,100%{ transform:translateY(0); } 50%{ transform:translateY(-10px); } }
+
+/* =========================================================
+   MARQUEE / TRUST
+   ========================================================= */
+.marquee{
+  background:var(--ink); color:#fff; padding:18px 0; overflow:hidden;
+  white-space:nowrap; position:relative;
+}
+.marquee-track{ display:inline-flex; gap:50px; animation:scroll 28s linear infinite; }
+.marquee-track span{ font-family:'Fraunces', serif; font-size:1.1rem; font-style:italic; opacity:.95; }
+.marquee-track i{ color:var(--accent); margin:0 50px; font-size:.6rem; vertical-align:middle; }
+@keyframes scroll{ from{ transform:translateX(0); } to{ transform:translateX(-50%); } }
+
+/* =========================================================
+   ABOUT — CREATIVE TYPOGRAPHY (NO IMAGE)
+   ========================================================= */
+.about-creative{ max-width:920px; margin:0 auto; text-align:center; }
+.about-statement{
+  font-size:clamp(1.9rem, 4.8vw, 3.4rem); line-height:1.18;
+  margin:18px 0 28px; color:var(--ink); font-weight:600;
+}
+.about-statement em{
+  font-style:italic; font-weight:500;
+  color:var(--brand);
+}
+.hl{ font-weight:700; position:relative; display:inline-block; }
+.hl::after{
+  content:""; position:absolute; left:-2px; right:-2px; bottom:6px; height:10px;
+  border-radius:6px; z-index:-1; opacity:.28;
+}
+.hl-purple{ color:var(--brand); }
+.hl-purple::after{ background:var(--brand); }
+.hl-pink{ color:var(--accent); }
+.hl-pink::after{ background:var(--accent); }
+.hl-teal{ color:var(--teal); }
+.hl-teal::after{ background:var(--teal); }
+.about-manifesto{
+  color:var(--ink-soft); font-size:1.08rem; max-width:680px; margin:0 auto 52px;
+}
+.principles{
+  display:grid; grid-template-columns:repeat(4, 1fr); gap:20px;
+  text-align:left;
+}
+.principle{
+  background:var(--surface); border:1px solid var(--line); border-radius:var(--radius);
+  padding:26px 22px; box-shadow:var(--shadow-sm);
+  transition:all .35s ease; position:relative; overflow:hidden;
+}
+.principle::before{
+  content:""; position:absolute; top:0; left:0; right:0; height:3px;
+  background:linear-gradient(90deg, var(--brand), var(--accent));
+  transform:scaleX(0); transform-origin:left; transition:transform .35s ease;
+}
+.principle:hover{ transform:translateY(-6px); box-shadow:var(--shadow-md); }
+.principle:hover::before{ transform:scaleX(1); }
+.p-icon{
+  width:50px; height:50px; border-radius:14px; display:grid; place-items:center;
+  margin-bottom:14px; font-size:1.2rem;
+}
+.p-icon.c1{ background:rgba(124,58,237,.12); color:var(--brand); }
+.p-icon.c2{ background:rgba(236,72,153,.12); color:var(--accent); }
+.p-icon.c3{ background:rgba(6,182,212,.12); color:var(--teal); }
+.p-icon.c4{ background:rgba(245,158,11,.12); color:var(--amber); }
+.principle h4{ font-family:'Inter', sans-serif; font-size:1rem; font-weight:600; margin-bottom:4px; color:var(--ink); }
+.principle p{ font-size:.85rem; color:var(--ink-soft); margin:0; }
+
+/* =========================================================
+   VIDEO GALLERY (3 vertical videos)
+   ========================================================= */
+.video-section{ background:var(--bg-soft); }
+.video-grid{
+  display:grid; grid-template-columns:repeat(3, 1fr); gap:24px;
+  max-width:980px; margin:0 auto;
+}
+.video-card{
+  aspect-ratio:9/16;
+  border-radius:var(--radius);
+  overflow:hidden;
+  background:var(--ink);
+  position:relative;
+  box-shadow:var(--shadow-md);
+  transition:transform .35s ease, box-shadow .35s ease;
+}
+.video-card:hover{ transform:translateY(-6px); box-shadow:var(--shadow-lg); }
+.video-card video{
+  width:100%; height:100%; object-fit:cover; display:block;
+  background:var(--ink);
+}
+.video-cap{
+  position:absolute; left:0; right:0; bottom:0;
+  padding:18px 16px 14px;
+  background:linear-gradient(0deg, rgba(15,15,30,.85), transparent);
+  color:#fff;
+}
+.video-cap .vtag{
+  font-size:.7rem; font-weight:600; letter-spacing:.1em; text-transform:uppercase;
+  color:var(--accent); margin-bottom:4px;
+}
+.video-cap h4{ font-family:'Inter', sans-serif; font-size:.92rem; font-weight:600; }
+.video-play{
+  position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
+  width:54px; height:54px; border-radius:50%;
+  background:rgba(255,255,255,.92); color:var(--brand);
+  display:grid; place-items:center; font-size:1.1rem;
+  pointer-events:none; transition:opacity .3s;
+  box-shadow:0 6px 20px rgba(0,0,0,.25);
+}
+.video-card video[playing] ~ .video-play,
+.video-card:hover .video-play{ opacity:0; }
+
+/* mobile: horizontal reel scroll */
+@media (max-width: 768px){
+  .video-grid{
+    display:flex;
+    overflow-x:auto;
+    scroll-snap-type:x mandatory;
+    gap:14px;
+    padding-bottom:10px;
+    margin:0 -24px;
+    padding-left:24px; padding-right:24px;
+    -webkit-overflow-scrolling:touch;
+    scrollbar-width:none;
+  }
+  .video-grid::-webkit-scrollbar{ display:none; }
+  .video-card{
+    flex:0 0 68%;
+    scroll-snap-align:center;
+  }
+}
+@media (max-width: 480px){
+  .video-card{ flex:0 0 75%; }
+}
+
+/* =========================================================
+   EXPERIENCE TIMELINE
+   ========================================================= */
+.timeline{ position:relative; max-width:880px; margin:0 auto; }
+.timeline::before{
+  content:""; position:absolute; left:24px; top:6px; bottom:6px; width:2px;
+  background:linear-gradient(180deg, var(--brand), var(--accent), var(--teal));
+}
+.tl-item{ position:relative; padding-left:72px; margin-bottom:42px; }
+.tl-item:last-child{ margin-bottom:0; }
+.tl-dot{
+  position:absolute; left:14px; top:6px; width:22px; height:22px; border-radius:50%;
+  background:var(--surface); border:3px solid var(--brand);
+  box-shadow:0 0 0 4px rgba(124,58,237,.12);
+}
+.tl-card{
+  background:var(--surface); border:1px solid var(--line); border-radius:var(--radius);
+  padding:26px 28px; box-shadow:var(--shadow-sm); transition:all .35s ease;
+}
+.tl-card:hover{ transform:translateY(-4px); box-shadow:var(--shadow-md); border-color:var(--brand); }
+.tl-top{ display:flex; justify-content:space-between; align-items:flex-start; gap:16px; flex-wrap:wrap; margin-bottom:6px; }
+.tl-top h3{ font-size:1.25rem; color:var(--ink); }
+.tl-top .org{ color:var(--brand); font-weight:600; font-size:.92rem; }
+.tl-period{
+  font-size:.78rem; font-weight:600; color:var(--ink-soft);
+  background:var(--bg-tint); padding:5px 12px; border-radius:100px; white-space:nowrap;
+}
+.tl-list{ margin-top:14px; }
+.tl-list li{ position:relative; padding-left:22px; margin-bottom:8px; color:var(--ink-soft); font-size:.95rem; }
+.tl-list li::before{
+  content:""; position:absolute; left:0; top:11px; width:7px; height:7px;
+  border-radius:50%; background:var(--accent);
+}
+
+/* =========================================================
+   SKILLS / TAGS
+   ========================================================= */
+.skill-blocks{ display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:24px; }
+.skill-block{
+  background:var(--surface); border:1px solid var(--line); border-radius:var(--radius);
+  padding:30px; box-shadow:var(--shadow-sm); transition:all .35s ease;
+}
+.skill-block:hover{ transform:translateY(-4px); box-shadow:var(--shadow-md); }
+.skill-block .icon-wrap{
+  width:52px; height:52px; border-radius:14px; display:grid; place-items:center;
+  margin-bottom:18px; font-size:1.3rem;
+}
+.icon-wrap.c1{ background:rgba(124,58,237,.12); color:var(--brand); }
+.icon-wrap.c2{ background:rgba(236,72,153,.12); color:var(--accent); }
+.icon-wrap.c3{ background:rgba(6,182,212,.12); color:var(--teal); }
+.skill-block h3{ font-size:1.2rem; margin-bottom:14px; color:var(--ink); }
+.tag-cloud{ display:flex; flex-wrap:wrap; gap:8px; }
+.tag{
+  font-size:.82rem; padding:7px 13px; border-radius:100px;
+  background:var(--bg-soft); color:var(--ink-soft); border:1px solid var(--line);
+  font-weight:500; transition:all .25s;
+}
+.tag:hover{ background:linear-gradient(120deg, var(--brand), var(--accent)); color:#fff; border-color:transparent; }
+
+/* AI tools grid with real brand logos */
+.ai-grid{ display:grid; grid-template-columns:repeat(auto-fit, minmax(160px, 1fr)); gap:18px; margin-top:40px; }
+.ai-card{
+  background:var(--surface); border:1px solid var(--line); border-radius:var(--radius);
+  padding:30px 18px; text-align:center; box-shadow:var(--shadow-sm);
+  transition:all .35s ease; cursor:default;
+}
+.ai-card:hover{ transform:translateY(-6px); box-shadow:var(--shadow-md); border-color:var(--brand); }
+.ai-logo{
+  width:56px; height:56px; margin:0 auto 14px; display:grid; place-items:center;
+  background:var(--bg-soft); border-radius:16px; padding:10px;
+}
+.ai-logo img{ width:100%; height:100%; object-fit:contain; }
+.ai-card h4{ font-family:'Inter', sans-serif; font-size:.98rem; font-weight:600; margin-bottom:4px; color:var(--ink); }
+.ai-card p{ font-size:.78rem; color:var(--ink-soft); }
+
+/* =========================================================
+   EDUCATION + LANGUAGES split
+   ========================================================= */
+.split-grid{ display:grid; grid-template-columns:1.4fr .9fr; gap:40px; align-items:start; }
+.edu-list{ display:flex; flex-direction:column; gap:20px; }
+.edu-item{
+  background:var(--surface); border:1px solid var(--line); border-radius:var(--radius);
+  padding:24px 26px; box-shadow:var(--shadow-sm); display:flex; gap:20px; align-items:flex-start;
+  transition:all .3s ease;
+}
+.edu-item:hover{ transform:translateX(4px); border-color:var(--brand); }
+.edu-icon{
+  flex-shrink:0; width:46px; height:46px; border-radius:12px;
+  background:linear-gradient(135deg, var(--brand), var(--accent));
+  display:grid; place-items:center; color:#fff; font-size:1.1rem;
+}
+.edu-info h4{ font-family:'Fraunces', serif; font-size:1.1rem; margin-bottom:2px; color:var(--ink); }
+.edu-info .deg{ color:var(--brand); font-size:.9rem; font-weight:600; }
+.edu-info .yr{ font-size:.82rem; color:var(--ink-soft); margin-top:4px; }
+
+.lang-card{
+  background:linear-gradient(160deg, var(--ink) 0%, #1E1B3A 100%);
+  color:#fff; border-radius:var(--radius); padding:34px 30px;
+  box-shadow:var(--shadow-md);
+}
+.lang-card h3{ color:#fff; font-size:1.4rem; margin-bottom:22px; }
+.lang-item{ margin-bottom:20px; }
+.lang-item:last-child{ margin-bottom:0; }
+.lang-top{ display:flex; justify-content:space-between; margin-bottom:8px; font-size:.92rem; }
+.lang-top .lvl{ color:var(--accent); font-weight:500; }
+.lang-bar{ height:5px; background:rgba(255,255,255,.12); border-radius:100px; overflow:hidden; }
+.lang-bar span{ display:block; height:100%; border-radius:100px;
+  background:linear-gradient(90deg, var(--accent), var(--teal)); }
+
+/* =========================================================
+   CONTACT
+   ========================================================= */
+.contact{
+  background:linear-gradient(160deg, var(--bg-soft), var(--bg-tint));
+  text-align:center;
+}
+.contact-card{
+  background:var(--surface); border:1px solid var(--line); border-radius:var(--radius-lg);
+  padding:60px 40px; box-shadow:var(--shadow-md); max-width:760px; margin:0 auto;
+}
+.contact-card h2{ font-size:clamp(1.9rem, 4vw, 2.8rem); margin-bottom:14px; color:var(--ink); }
+.contact-card p{ color:var(--ink-soft); margin-bottom:32px; font-size:1.05rem; }
+.contact-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin-bottom:34px; }
+.contact-item{
+  padding:22px 16px; border:1px solid var(--line); border-radius:var(--radius);
+  background:var(--bg); transition:all .3s ease;
+}
+.contact-item:hover{ border-color:var(--brand); transform:translateY(-3px); }
+.contact-item i{ font-size:1.3rem; color:var(--accent); margin-bottom:10px; }
+.contact-item .lbl{ font-size:.78rem; color:var(--ink-soft); text-transform:uppercase; letter-spacing:.08em; margin-bottom:4px; }
+.contact-item .val{ font-size:.92rem; font-weight:500; word-break:break-word; color:var(--ink); }
+.contact-item .val a{ color:var(--ink); }
+.contact-item .val a:hover{ color:var(--brand); }
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+.footer{ background:var(--ink); color:#C9C2D8; padding:48px 0 30px; }
+.footer-inner{ display:flex; justify-content:space-between; align-items:center; gap:24px; flex-wrap:wrap; }
+.footer .brand-logo{ color:#fff; }
+.footer .brand-logo .last{ color:#fff; }
+.footer .brand-logo .first{ color:var(--accent); }
+.footer p{ font-size:.88rem; }
+.footer-socials{ display:flex; gap:14px; }
+.footer-socials a{
+  width:38px; height:38px; border-radius:50%; border:1px solid rgba(255,255,255,.15);
+  display:grid; place-items:center; color:#C9C2D8; transition:all .3s;
+}
+.footer-socials a:hover{ background:var(--accent); color:#fff; border-color:var(--accent); transform:translateY(-3px); }
+.footer-bottom{ text-align:center; padding-top:24px; margin-top:24px; border-top:1px solid rgba(255,255,255,.08); font-size:.82rem; color:#8A849B; }
+
+/* =========================================================
+   WHATSAPP FLOATING BUTTON
+   ========================================================= */
+.wa-float{
+  position:fixed; bottom:26px; right:26px; z-index:200;
+  width:60px; height:60px; border-radius:50%;
+  background:#25D366; color:#fff; display:grid; place-items:center;
+  font-size:1.8rem; box-shadow:0 8px 24px rgba(37,211,102,.45);
+  transition:transform .3s ease; text-decoration:none;
+}
+.wa-float:hover{ transform:scale(1.08) rotate(8deg); }
+.wa-float::before{
+  content:""; position:absolute; inset:0; border-radius:50%;
+  background:rgba(37,211,102,.5); animation:pulse 2.2s ease-out infinite; z-index:-1;
+}
+@keyframes pulse{
+  0%{ transform:scale(1); opacity:.7; }
+  100%{ transform:scale(1.9); opacity:0; }
+}
+.wa-tooltip{
+  position:absolute; right:72px; top:50%; transform:translateY(-50%) translateX(10px);
+  background:var(--ink); color:#fff; padding:9px 14px; border-radius:10px;
+  font-size:.82rem; white-space:nowrap; opacity:0; pointer-events:none;
+  transition:all .3s ease; font-family:'Inter', sans-serif;
+}
+.wa-tooltip::after{
+  content:""; position:absolute; right:-5px; top:50%; transform:translateY(-50%) rotate(45deg);
+  width:10px; height:10px; background:var(--ink);
+}
+.wa-float:hover .wa-tooltip{ opacity:1; transform:translateY(-50%) translateX(0); }
+
+/* =========================================================
+   SCROLL REVEAL
+   ========================================================= */
+.reveal{ opacity:0; transform:translateY(28px); transition:opacity .8s ease, transform .8s ease; }
+.reveal.in{ opacity:1; transform:translateY(0); }
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+@media (max-width: 920px){
+  .nav-links{ display:none; }
+  .menu-btn{ display:grid; place-items:center; }
+  .nav-links.open{
+    display:flex; flex-direction:column; position:absolute; top:100%; left:0; right:0;
+    background:var(--surface); padding:24px; gap:18px; border-bottom:1px solid var(--line);
+    box-shadow:var(--shadow-md);
+  }
+  .hero-grid{ grid-template-columns:1fr; gap:48px; text-align:center; }
+  /* mobile: image FIRST then text */
+  .hero-figure{ order:-1; }
+  .hero-text .greeting, .hero-meta, .hero-btns{ justify-content:center; }
+  .hero-text .tagline{ margin-left:auto; margin-right:auto; }
+  .split-grid{ grid-template-columns:1fr; }
+  .contact-grid{ grid-template-columns:1fr; }
+  .principles{ grid-template-columns:repeat(2, 1fr); }
+  section{ padding:72px 0; }
+}
+@media (max-width: 560px){
+  .container{ padding:0 18px; }
+  .hero{ padding:120px 0 60px; }
+  .hero-photo-wrap{ width:min(280px, 78vw); }
+  .hero-badge{ font-size:.78rem; padding:8px 12px; }
+  .hero-badge.b1{ left:0; }
+  .hero-badge.b2{ right:0; }
+  .hero-badge.b3{ left:0; }
+  .principles{ grid-template-columns:1fr; }
+  .tl-item{ padding-left:58px; }
+  .timeline::before{ left:18px; }
+  .tl-dot{ left:8px; }
+  .contact-card{ padding:40px 22px; }
+  .wa-float{ width:54px; height:54px; font-size:1.6rem; bottom:20px; right:20px; }
+  .wa-tooltip{ display:none; }
+  /* video grid mobile padding */
+  .video-grid{ margin:0 -18px; padding-left:18px; padding-right:18px; }
+}
+</style>
+</head>
+<body>
+
+<!-- ===================== NAV ===================== -->
+<nav class="nav" id="nav">
+  <div class="container nav-inner">
+    <a href="#home" class="brand-logo"><span class="first">Menal</span> <span class="last">Fatima</span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#content">Work</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#contact" class="nav-cta">Let's talk</a></li>
+    </ul>
+    <button class="menu-btn" id="menuBtn" aria-label="Toggle menu"><i class="fa-solid fa-bars"></i></button>
+  </div>
+</nav>
+
+<!-- ===================== HERO ===================== -->
+<header class="hero" id="home">
+  <div class="container hero-grid">
+    <!-- TEXT -->
+    <div class="hero-text">
+      <span class="greeting"><span class="wave">👋</span> Hello, I'm Menal</span>
+      <h1>Menal <span class="accent-word">Fatima</span></h1>
+      <p class="role">Social Media Manager <span>·</span> Digital Marketing <span>·</span> AI Content Creation</p>
+      <p class="tagline">I help brands grow online through thoughtful content planning, AI-powered visuals, and creative strategies that actually connect with people.</p>
+
+      <div class="hero-meta">
+        <a href="https://maps.google.com/?q=Gulberg+3+Lahore" target="_blank" rel="noopener"><i class="fa-solid fa-location-dot"></i> Gulberg 3, Lahore</a>
+        <a href="tel:03247406829"><i class="fa-solid fa-phone"></i> 0324 7406829</a>
+        <a href="mailto:minalfatima956@gmail.com"><i class="fa-solid fa-envelope"></i> minalfatima956@gmail.com</a>
+      </div>
+
+      <div class="hero-btns">
+        <a href="#contact" class="btn btn-primary">Work with me <i class="fa-solid fa-arrow-right"></i></a>
+        <a href="#content" class="btn btn-ghost">View my work</a>
+      </div>
+    </div>
+
+    <!-- IMAGE -->
+    <div class="hero-figure">
+      <div class="ring"></div>
+      <div class="ring r2"></div>
+      <div class="hero-photo-wrap">
+        <!-- =========================================================
+             PASTE YOUR OWN IMAGE SOURCE BELOW (replace the src)
+             Recommended: square image, min 600x600px
+        ========================================================= -->
+        <img class="hero-photo" src="menalfatima.jpeg" alt="Menal Fatima" />
+      </div>
+
+      <div class="hero-badge b1"><i class="fa-solid fa-wand-magic-sparkles"></i> AI Content</div>
+      <div class="hero-badge b2"><i class="fa-solid fa-chart-line"></i> Digital Growth</div>
+      <div class="hero-badge b3"><i class="fa-solid fa-heart"></i> 1+ Year Exp.</div>
+    </div>
+  </div>
+</header>
+
+<!-- ===================== MARQUEE ===================== -->
+<div class="marquee">
+  <div class="marquee-track">
+    <span>Social Media Management</span><i class="fa-solid fa-asterisk"></i>
+    <span>AI Image Generation</span><i class="fa-solid fa-asterisk"></i>
+    <span>Content Planning</span><i class="fa-solid fa-asterisk"></i>
+    <span>Digital Growth</span><i class="fa-solid fa-asterisk"></i>
+    <span>Creative Strategy</span><i class="fa-solid fa-asterisk"></i>
+    <span>AI Video Creation</span><i class="fa-solid fa-asterisk"></i>
+    <!-- duplicate for seamless loop -->
+    <span>Social Media Management</span><i class="fa-solid fa-asterisk"></i>
+    <span>AI Image Generation</span><i class="fa-solid fa-asterisk"></i>
+    <span>Content Planning</span><i class="fa-solid fa-asterisk"></i>
+    <span>Digital Growth</span><i class="fa-solid fa-asterisk"></i>
+    <span>Creative Strategy</span><i class="fa-solid fa-asterisk"></i>
+    <span>AI Video Creation</span><i class="fa-solid fa-asterisk"></i>
+  </div>
+</div>
+
+<!-- ===================== ABOUT (creative, no image) ===================== -->
+<section id="about">
+  <div class="container">
+    <div class="about-creative reveal">
+      <span class="eyebrow">About me</span>
+      <h2 class="about-statement">
+        I help brands <em>show up</em> online with
+        <span class="hl hl-purple">strategy</span>,
+        <span class="hl hl-pink">creativity</span> &amp;
+        <span class="hl hl-teal">AI-powered</span> content.
+      </h2>
+      <p class="about-manifesto">
+        Social Media Manager with approximately one year of experience managing multiple projects and supporting their digital growth through content planning, social media management, and AI-powered visual creation. I generate videos and images with modern AI tools, develop engaging content, and adapt creative strategies to each project's goals — combining strategy with a genuine love for storytelling.
+      </p>
+
+      <div class="principles">
+        <div class="principle">
+          <div class="p-icon c1"><i class="fa-solid fa-chess"></i></div>
+          <h4>Strategy First</h4>
+          <p>Every post serves a clear purpose.</p>
+        </div>
+        <div class="principle">
+          <div class="p-icon c2"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+          <h4>AI-Powered</h4>
+          <p>Modern tools, faster creative output.</p>
+        </div>
+        <div class="principle">
+          <div class="p-icon c3"><i class="fa-solid fa-eye"></i></div>
+          <h4>Audience-Obsessed</h4>
+          <p>Built for the people who scroll.</p>
+        </div>
+        <div class="principle">
+          <div class="p-icon c4"><i class="fa-solid fa-rocket"></i></div>
+          <h4>Growth-Focused</h4>
+          <p>Content that moves real metrics.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== VIDEO GALLERY (3 vertical videos) ===================== -->
+<section id="content" class="video-section">
+  <div class="container">
+    <div class="section-head reveal" style="text-align:center; margin:0 auto 48px;">
+      <span class="eyebrow" style="margin:0 auto 18px;">Content generation</span>
+      <h2>AI-Generated Video Work</h2>
+      <p style="margin:0 auto;">A selection of vertical videos created with AI tools for social campaigns &amp; promotional content.</p>
+    </div>
+
+    <div class="video-grid reveal">
+      <!-- =========================================================
+           VIDEO 1 — replace src & poster with your own AI-generated video
+      ========================================================= -->
+      <div class="video-card">
+        <video
+          src="vid-1.mp4"
+          poster="https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=600&h=1067&fit=crop"
+          autoplay muted loop playsinline preload="auto"
+          onclick="this.paused?this.play():this.pause();"></video>
+        <div class="video-play"><i class="fa-solid fa-play"></i></div>
+        <div class="video-cap">
+          <div class="vtag">AI Campaign</div>
+          <h4>Brand Promo Reel</h4>
+        </div>
+      </div>
+
+      <!-- =========================================================
+           VIDEO 2 — replace src & poster with your own AI-generated video
+      ========================================================= -->
+      <div class="video-card">
+        <video
+          src="vid-2.mp4"
+          poster="https://images.unsplash.com/photo-1551434678-e076c223a692?w=600&h=1067&fit=crop"
+          autoplay muted loop playsinline preload="auto"
+          onclick="this.paused?this.play():this.pause();"></video>
+        <div class="video-play"><i class="fa-solid fa-play"></i></div>
+        <div class="video-cap">
+          <div class="vtag">Social Story</div>
+          <h4>Product Launch Teaser</h4>
+        </div>
+      </div>
+
+      <!-- =========================================================
+           VIDEO 3 — replace src & poster with your own AI-generated video
+      ========================================================= -->
+      <div class="video-card">
+        <video
+          src="vid-3.mp4"
+          poster="https://images.unsplash.com/photo-1620712943543-bcc4688e6719?w=600&h=1067&fit=crop"
+          autoplay muted loop playsinline preload="auto"
+          onclick="this.paused?this.play():this.pause();"></video>
+        <div class="video-play"><i class="fa-solid fa-play"></i></div>
+        <div class="video-cap">
+          <div class="vtag">AI Visual</div>
+          <h4>Creative Concept Reel</h4>
+        </div>
+      </div>
+    </div>
+
+    <p style="text-align:center; margin-top:28px; font-size:.85rem; color:var(--ink-soft);">
+      <i class="fa-solid fa-circle-play" style="color:var(--brand);"></i>
+      Videos auto-play · tap to pause / play · swipe to browse on mobile
+    </p>
+  </div>
+</section>
+
+<!-- ===================== EXPERIENCE ===================== -->
+<section id="experience" style="background:var(--bg-soft);">
+  <div class="container">
+    <div class="section-head reveal" style="margin:0 auto 56px; text-align:center;">
+      <span class="eyebrow" style="margin:0 auto 18px;">Career path</span>
+      <h2>Professional Experience</h2>
+      <p style="margin:0 auto;">A snapshot of the roles where I've grown — from social media management to coordination and marketing.</p>
+    </div>
+
+    <div class="timeline">
+      <div class="tl-item reveal">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <div class="tl-top">
+            <div>
+              <h3>Social Media Manager</h3>
+              <div class="org">EREIN</div>
+            </div>
+            <span class="tl-period">Present · ~1 year</span>
+          </div>
+          <ul class="tl-list">
+            <li>Manage social media activities for multiple projects, focused on audience engagement, brand visibility, and digital growth.</li>
+            <li>Plan and create social media content aligned with each project's goals, audience, and brand identity.</li>
+            <li>Generate AI-assisted images and videos for social campaigns, promotional content, and digital creatives.</li>
+            <li>Use AI tools such as Google Flow, Claude AI, Gemini, ChatGPT, and Grok to support ideation, content development, and creative production.</li>
+            <li>Support content optimization and growth-focused execution across social media platforms.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="tl-item reveal">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <div class="tl-top">
+            <div>
+              <h3>Computer Science Dept. Head &amp; Coordinator</h3>
+              <div class="org">Al Sufa Science Girls High School</div>
+            </div>
+            <span class="tl-period">2024 – 2025</span>
+          </div>
+          <ul class="tl-list">
+            <li>Coordinated computer science department activities and maintained student records, attendance reports, and documentation.</li>
+            <li>Communicated and coordinated with parents and faculty to support academic and administrative tasks.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="tl-item reveal">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <div class="tl-top">
+            <div>
+              <h3>Representative &amp; Marketing Executive</h3>
+              <div class="org">Zafi Institute of New Technology</div>
+            </div>
+            <span class="tl-period">2021 – 2022</span>
+          </div>
+          <ul class="tl-list">
+            <li>Worked as a company representative and call center executive, supporting marketing and customer communication.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="tl-item reveal">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <div class="tl-top">
+            <div>
+              <h3>Data Entry Operator</h3>
+              <div class="org">Golden Girl Cosmetics</div>
+            </div>
+            <span class="tl-period">—</span>
+          </div>
+          <ul class="tl-list">
+            <li>Performed data-entry duties and maintained business information accurately.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="tl-item reveal">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <div class="tl-top">
+            <div>
+              <h3>Freelance Experience</h3>
+              <div class="org">Self-employed</div>
+            </div>
+            <span class="tl-period">~1 year</span>
+          </div>
+          <ul class="tl-list">
+            <li>Completed freelance work across various projects for approximately one year.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SKILLS ===================== -->
+<section id="skills">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">What I bring</span>
+      <h2>Core Skills &amp; Capabilities</h2>
+      <p>A blend of social media expertise, AI-powered content creation, and technical know-how.</p>
+    </div>
+
+    <div class="skill-blocks">
+      <div class="skill-block reveal">
+        <div class="icon-wrap c1"><i class="fa-solid fa-share-nodes"></i></div>
+        <h3>Social Media &amp; Marketing</h3>
+        <div class="tag-cloud">
+          <span class="tag">Social Media Management</span>
+          <span class="tag">Content Planning</span>
+          <span class="tag">Digital Growth Support</span>
+          <span class="tag">Audience Engagement</span>
+          <span class="tag">Marketing Communication</span>
+          <span class="tag">Creative Content Development</span>
+          <span class="tag">Project Coordination</span>
+        </div>
+      </div>
+
+      <div class="skill-block reveal">
+        <div class="icon-wrap c2"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+        <h3>AI Content Creation</h3>
+        <div class="tag-cloud">
+          <span class="tag">AI Image Generation</span>
+          <span class="tag">AI Video Generation</span>
+          <span class="tag">Prompt Engineering</span>
+          <span class="tag">Creative Ideation</span>
+          <span class="tag">Visual Storytelling</span>
+        </div>
+      </div>
+
+      <div class="skill-block reveal">
+        <div class="icon-wrap c3"><i class="fa-solid fa-code"></i></div>
+        <h3>Technical Skills</h3>
+        <div class="tag-cloud">
+          <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span>
+          <span class="tag">Python</span><span class="tag">C</span><span class="tag">C++</span><span class="tag">Java</span>
+          <span class="tag">PHP</span><span class="tag">WordPress</span><span class="tag">Shopify</span>
+          <span class="tag">Git &amp; GitHub</span><span class="tag">MySQL</span>
+          <span class="tag">Responsive Web Dev</span><span class="tag">CRUD Operations</span>
+          <span class="tag">APIs</span><span class="tag">OOP</span><span class="tag">Data Structures</span>
+          <span class="tag">MS Word / PowerPoint / Excel</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- AI tools grid with REAL brand logos -->
+    <div style="margin-top:64px;" class="reveal">
+      <div class="section-head" style="margin-bottom:8px;">
+        <span class="eyebrow">Tools I work with</span>
+        <h2 style="font-size:2rem;">AI Tools</h2>
+      </div>
+      <div class="ai-grid">
+        <!-- Google Flow (Google product) -->
+        <div class="ai-card">
+          <div class="ai-logo">
+            <img src="https://cdn.simpleicons.org/google/4285F4" alt="Google Flow logo" onerror="this.style.display='none';this.parentElement.innerHTML='<i class=&quot;fa-brands fa-google&quot; style=&quot;font-size:1.5rem;color:#4285F4&quot;></i>'" />
+          </div>
+          <h4>Google Flow</h4>
+          <p>AI video creation</p>
+        </div>
+        <!-- Claude (Anthropic) -->
+        <div class="ai-card">
+          <div class="ai-logo">
+            <img src="https://cdn.simpleicons.org/anthropic/D97757" alt="Claude AI logo" onerror="this.style.display='none';this.parentElement.innerHTML='<i class=&quot;fa-solid fa-feather&quot; style=&quot;font-size:1.5rem;color:#D97757&quot;></i>'" />
+          </div>
+          <h4>Claude AI</h4>
+          <p>Ideation &amp; writing</p>
+        </div>
+        <!-- Google Gemini -->
+        <div class="ai-card">
+          <div class="ai-logo">
+            <img src="https://cdn.simpleicons.org/googlegemini/1C69FF" alt="Google Gemini logo" onerror="this.style.display='none';this.parentElement.innerHTML='<i class=&quot;fa-solid fa-gem&quot; style=&quot;font-size:1.5rem;color:#1C69FF&quot;></i>'" />
+          </div>
+          <h4>Google Gemini</h4>
+          <p>Multimodal AI</p>
+        </div>
+        <!-- ChatGPT (OpenAI) -->
+        <div class="ai-card">
+          <div class="ai-logo">
+            <img src="https://cdn.simpleicons.org/openai/10A37F" alt="ChatGPT logo" onerror="this.style.display='none';this.parentElement.innerHTML='<i class=&quot;fa-solid fa-comment-dots&quot; style=&quot;font-size:1.5rem;color:#10A37F&quot;></i>'" />
+          </div>
+          <h4>ChatGPT</h4>
+          <p>Content &amp; strategy</p>
+        </div>
+        <!-- Grok (xAI) -->
+        <div class="ai-card">
+          <div class="ai-logo">
+            <img src="https://cdn.simpleicons.org/x/000000" alt="Grok logo" onerror="this.style.display='none';this.parentElement.innerHTML='<i class=&quot;fa-brands fa-x-twitter&quot; style=&quot;font-size:1.5rem;color:#000000&quot;></i>'" />
+          </div>
+          <h4>Grok</h4>
+          <p>Creative assistance</p>
+        </div>
+        <!-- More -->
+        <div class="ai-card">
+          <div class="ai-logo" style="background:linear-gradient(135deg, rgba(124,58,237,.15), rgba(236,72,153,.15));">
+            <i class="fa-solid fa-plus" style="font-size:1.5rem;background:linear-gradient(120deg,var(--brand),var(--accent));-webkit-background-clip:text;background-clip:text;color:transparent;"></i>
+          </div>
+          <h4>+ More</h4>
+          <p>Always exploring</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== EDUCATION + LANGUAGES ===================== -->
+<section id="education" style="background:var(--bg-soft);">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Background</span>
+      <h2>Education &amp; Languages</h2>
+      <p>Academic foundation and the languages I work in.</p>
+    </div>
+
+    <div class="split-grid">
+      <div class="edu-list reveal">
+        <div class="edu-item">
+          <div class="edu-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+          <div class="edu-info">
+            <h4>Riphah International College</h4>
+            <div class="deg">ADP, Computer Science</div>
+            <div class="yr">2023 – 2025</div>
+          </div>
+        </div>
+        <div class="edu-item">
+          <div class="edu-icon"><i class="fa-solid fa-book"></i></div>
+          <div class="edu-info">
+            <h4>Aspire Group of Colleges</h4>
+            <div class="deg">ICS, Statistics</div>
+            <div class="yr">2021 – 2023</div>
+          </div>
+        </div>
+        <div class="edu-item">
+          <div class="edu-icon"><i class="fa-solid fa-school"></i></div>
+          <div class="edu-info">
+            <h4>Iqra Education Center</h4>
+            <div class="deg">Matric, Biology Science</div>
+            <div class="yr">2019 – 2021</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="lang-card reveal">
+        <h3>Languages</h3>
+        <div class="lang-item">
+          <div class="lang-top"><span>Urdu</span><span class="lvl">Native</span></div>
+          <div class="lang-bar"><span style="width:100%;"></span></div>
+        </div>
+        <div class="lang-item">
+          <div class="lang-top"><span>English</span><span class="lvl">Professional</span></div>
+          <div class="lang-bar"><span style="width:85%;"></span></div>
+        </div>
+        <div class="lang-item">
+          <div class="lang-top"><span>Punjabi</span><span class="lvl">Fluent</span></div>
+          <div class="lang-bar"><span style="width:90%;"></span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CONTACT ===================== -->
+<section id="contact" class="contact">
+  <div class="container">
+    <div class="contact-card reveal">
+      <span class="eyebrow" style="margin:0 auto 18px;">Get in touch</span>
+      <h2>Let's create something great together.</h2>
+      <p>Whether you need a social media strategy, AI-generated visuals, or fresh content for your brand — I'd love to hear from you.</p>
+
+      <div class="contact-grid">
+        <a href="tel:03247406829" class="contact-item">
+          <i class="fa-solid fa-phone"></i>
+          <div class="lbl">Phone</div>
+          <div class="val">0324 7406829</div>
+        </a>
+        <a href="mailto:minalfatima956@gmail.com" class="contact-item">
+          <i class="fa-solid fa-envelope"></i>
+          <div class="lbl">Email</div>
+          <div class="val">minalfatima956@gmail.com</div>
+        </a>
+        <a href="https://maps.google.com/?q=Gulberg+3+Lahore" target="_blank" rel="noopener" class="contact-item">
+          <i class="fa-solid fa-location-dot"></i>
+          <div class="lbl">Location</div>
+          <div class="val">Gulberg 3, Lahore</div>
+        </a>
+      </div>
+
+      <a href="https://wa.me/923247406829" target="_blank" rel="noopener" class="btn btn-primary">
+        <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="footer">
+  <div class="container footer-inner">
+    <a href="#home" class="brand-logo"><span class="first">Menal</span> <span class="last">Fatima</span></a>
+    <p>Social Media Manager · AI Content Creator · Lahore, Pakistan</p>
+    <div class="footer-socials">
+      <a href="mailto:minalfatima956@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+      <a href="tel:03247406829" aria-label="Phone"><i class="fa-solid fa-phone"></i></a>
+      <a href="https://wa.me/923247406829" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+    </div>
+  </div>
+  <div class="footer-bottom">© <span id="year"></span> Menal Fatima · Designed with care.</div>
+</footer>
+
+<!-- ===================== WHATSAPP FLOAT ===================== -->
+<a href="https://wa.me/923247406829" target="_blank" rel="noopener" class="wa-float" aria-label="Chat on WhatsApp">
+  <i class="fa-brands fa-whatsapp"></i>
+  <span class="wa-tooltip">Chat with me!</span>
+</a>
+
+<script>
+/* =========================================================
+   NAV scroll state + mobile menu
+   ========================================================= */
+const nav = document.getElementById('nav');
+const navLinks = document.getElementById('navLinks');
+const menuBtn = document.getElementById('menuBtn');
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 30) nav.classList.add('scrolled');
+  else nav.classList.remove('scrolled');
+});
+
+menuBtn.addEventListener('click', () => {
+  navLinks.classList.toggle('open');
+});
+navLinks.querySelectorAll('a').forEach(a => {
+  a.addEventListener('click', () => navLinks.classList.remove('open'));
+});
+
+/* =========================================================
+   Scroll reveal
+   ========================================================= */
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('in');
+      io.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.12, rootMargin: '0px 0px -50px 0px' });
+
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+/* =========================================================
+   Auto-play videos + smart visibility control
+   - All videos autoplay muted on load (browser-safe)
+   - Pause when scrolled out of view (saves bandwidth, smoother scroll)
+   - Tap to toggle play/pause
+   ========================================================= */
+const videos = document.querySelectorAll('.video-card video');
+
+videos.forEach(v => {
+  // Try to autoplay (muted autoplay is allowed by all modern browsers)
+  const tryPlay = () => {
+    const p = v.play();
+    if (p && typeof p.catch === 'function') p.catch(() => {});
+  };
+  tryPlay();
+
+  // Hide / show the play button overlay
+  v.addEventListener('play', () => {
+    const card = v.closest('.video-card');
+    if (card) card.querySelector('.video-play').style.opacity = '0';
+  });
+  v.addEventListener('pause', () => {
+    const card = v.closest('.video-card');
+    if (card) card.querySelector('.video-play').style.opacity = '1';
+  });
+});
+
+// Pause videos that are off-screen, resume when they come back in view.
+// Big performance + UX win for a multi-video section.
+const visObserver = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    const v = e.target;
+    if (e.isIntersecting) {
+      const p = v.play();
+      if (p && typeof p.catch === 'function') p.catch(() => {});
+    } else {
+      v.pause();
+    }
+  });
+}, { threshold: 0.25 });
+
+videos.forEach(v => visObserver.observe(v));
+
+// Resume play on tab refocus (some browsers auto-pause on blur)
+document.addEventListener('visibilitychange', () => {
+  if (!document.hidden) {
+    videos.forEach(v => {
+      const r = v.getBoundingClientRect();
+      const onScreen = r.top < window.innerHeight && r.bottom > 0;
+      if (onScreen && v.paused) {
+        const p = v.play();
+        if (p && typeof p.catch === 'function') p.catch(() => {});
+      }
+    });
+  }
+});
+
+/* =========================================================
+   Year in footer
+   ========================================================= */
+document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
